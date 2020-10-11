@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks.Dataflow;
 
 namespace Universita
 {
@@ -6,7 +7,10 @@ namespace Universita
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Universita u = new Universita("Politecnico Di Torino");
+            Console.WriteLine("Universita: " + u.ToString()); //Universita: Politecnico Di Torino
+            Rettore r = new Rettore("Enrico", "Saracco", "WHBDYV38E17E635Y");
+            Console.WriteLine("Rettore: " + r.ToString()); //Rettore: Enrico Saracco
         }
     }
 }
